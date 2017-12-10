@@ -1,0 +1,11 @@
+services:
+
+  subitolabs.admin.block.terms:
+    class: Subitolabs\Bundle\TermsBlockBundle\Service\TermsBlockService
+    arguments:
+    - "subitolabs.admin.block.terms"
+    - "@templating"
+    - "@doctrine.orm.entity_manager"
+    - "@?sonata.admin.pool"
+    tags:
+    - { name: "sonata.block" }
